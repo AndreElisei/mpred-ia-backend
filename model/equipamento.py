@@ -1,4 +1,5 @@
 from sqlalchemy import Column, String, Integer
+from sqlalchemy.orm import relationship
 from model import Base
 
 class Equipamento(Base):
@@ -8,6 +9,8 @@ class Equipamento(Base):
     nome = Column(String(140))
     tipo = Column(String(50))
     tag = Column(String(50))
+
+    anomalias = relationship("Anomalia")
 
     def __init__(self, nome, tipo, tag):
         self.nome = nome

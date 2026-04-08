@@ -1,4 +1,4 @@
-# MPred-IA Backend
+# MPred-IA - Backend
 
 ## 📌 Descrição
 
@@ -10,36 +10,36 @@ Permite cadastrar, listar e remover equipamentos, além de registrar anomalias a
 
 ## 🚀 Tecnologias utilizadas
 
-* Python
-* Flask
-* Flask-OpenAPI3
-* SQLAlchemy
-* SQLite
-* Flask-CORS
+- Python
+- Flask
+- Flask-OpenAPI3
+- SQLAlchemy
+- SQLite
+- Flask-CORS
 
 ---
 
 ## ⚙️ Funcionalidades
 
-* Cadastro de equipamentos
-* Listagem de equipamentos
-* Cadastro de anomalias
-* Relacionamento entre equipamentos e anomalias
-* Remoção de equipamentos
-* Documentação automática com Swagger
+- Cadastro de equipamentos
+- Listagem de equipamentos
+- Cadastro de anomalias
+- Relacionamento entre equipamentos e anomalias
+- Remoção de equipamentos
+- Documentação automática com Swagger
 
 ---
 
 ## 📂 Estrutura do projeto
 
-```
+
 backend/
 │── model/
 │── schemas/
 │── database/
 │── app.py
 │── requirements.txt
-```
+
 
 ---
 
@@ -47,36 +47,36 @@ backend/
 
 ### 1. Clonar o repositório
 
-```
-git clone https://github.com/seu-usuario/mpred-ia-backend.git
+
+git clone https://github.com/AndreElisei/mpred-ia-backend.git
+
 cd mpred-ia-backend
-```
+
 
 ### 2. Criar ambiente virtual
 
-```
+
 python -m venv venv
-```
+
 
 ### 3. Ativar ambiente
 
 **Windows:**
 
-```
 venv\Scripts\activate
-```
+
 
 ### 4. Instalar dependências
 
-```
+
 pip install -r requirements.txt
-```
+
 
 ### 5. Executar aplicação
 
-```
+
 flask run
-```
+
 
 ---
 
@@ -84,16 +84,16 @@ flask run
 
 Disponível em:
 
-```
+
 http://127.0.0.1:5000/openapi
-```
+
 
 ---
 
 ## 🔗 Rotas principais
 
 | Método | Rota              | Descrição            |
-| ------ | ----------------- | -------------------- |
+|--------|------------------|----------------------|
 | GET    | /equipamentos     | Lista equipamentos   |
 | POST   | /equipamento      | Cadastra equipamento |
 | POST   | /anomalia         | Cadastra anomalia    |
@@ -101,6 +101,33 @@ http://127.0.0.1:5000/openapi
 
 ---
 
-## 📌 Observações
+## 📊 Status Codes
+
+- 200: Sucesso
+- 201: Criado com sucesso
+- 404: Não encontrado
+- 422: Erro de validação
+
+---
+
+## 📥 Exemplo de requisição
+
+### Criar equipamento
+
+```json
+{
+  "nome": "Motor WEG 10cv",
+  "tipo": "Motor",
+  "tag": "M-0001"
+}
+
+---
+
+📦 Banco de Dados
+SQLite (arquivo local)
+Tabelas:
+Equipamento
+Anomalia
+📌 Observações
 
 Projeto desenvolvido como MVP para a Pós-Graduação em Desenvolvimento Full Stack da PUC-Rio.
